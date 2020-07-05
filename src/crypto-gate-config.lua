@@ -2,6 +2,17 @@
 
 local _M = {}
 
+function _M.load(filepath)
+	local configEnv = {}
 
+	local f,err = loadfile(filepath, "t", configEnv)
 
-return _M;
+	if f then
+	   f()
+	   _M.path_config = configEnv.path_config
+	else
+	   error(err)
+	end
+end
+
+return _M
