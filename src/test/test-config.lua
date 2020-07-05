@@ -3,16 +3,15 @@ path_config = {
 	{
 		url = "/resource/1",
 		verb = "GET",
-		response_crypto = {
-			mode = "none"
-		}
+		response_crypto = "none"
+		-- request_crypto = "none"
 	},
 
 	{
 		url = "/resource/2",
 		verb = "GET",
 		request_crypto = "all",
-		response_crypto = "none"
+		-- response_crypto = "none"
 	},
 
 	{
@@ -27,11 +26,11 @@ path_config = {
 		verb = "GET",
 
 		request_crypto = {
-			mode = "json",
+			provider = "json",
 			path = "/secret"
 		},
 
-		response_crypto = "none"
+		-- response_crypto = "none"
 	},
 
 	{
@@ -39,12 +38,12 @@ path_config = {
 		verb = "GET",
 		
 		request_crypto = {
-			mode = "json",
+			provider = "json",
 			path = "/secret"
 		},
 		
 		response_crypto = {
-			mode = "json",
+			provider = "json",
 			path = "/secret"
 		},
 	}

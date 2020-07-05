@@ -29,14 +29,14 @@ function tb:test_should_load_path_config_items()
    	if(item.verb ~= "GET") then
       error("Wrong url")
    	end
-   	if(item.request_crypto.mode ~= "json") then
-   		error("Wrong request ctrypro mode")
+   	if(item.request_crypto.provider ~= "json") then
+   		error("Wrong request ctrypro data provider")
    	end
    	if(item.request_crypto.path ~= "/secret") then
    		error("Wrong request ctrypro path")
    	end
-   	if(item.response_crypto.mode ~= "json") then
-   		error("Wrong response ctrypro mode")
+   	if(item.response_crypto.provider ~= "json") then
+   		error("Wrong response ctrypro data provider")
    	end
    	if(item.response_crypto.path ~= "/secret") then
    		error("Wrong response ctrypro path")
