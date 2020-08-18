@@ -26,8 +26,8 @@ function tb:test_should_load_path_config_items()
    	if(item.url ~= "/resource/5") then
       error("Wrong url")
    	end
-   	if(item.verb ~= "GET") then
-      error("Wrong url")
+   	if(item.method ~= "GET") then
+      error("Wrong method")
    	end
    	if(item.request_crypto.provider ~= "json") then
    		error("Wrong request ctrypro data provider")
